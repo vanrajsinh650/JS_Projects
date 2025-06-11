@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance-Club</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: white;
+            background-color: black;
+        }
+
+        #video-container {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            gap: 0px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        video {
+            height: 350px;
+            width: auto;
+        }
+
+        .controls {
+            z-index: 10;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h1>Welcome to our Dance Club, Let's Dance!</h1>
+        <button onclick="startshow()" id="start">Let's Dance</button>
+        <button onclick="stopshow()" id="stop">Stop Dance</button>
+    </div>
+
+    <div id="video-container" style="display: none;">
+        <video id="dancevideo1" autoplay loop muted>
+            <source src="./video1.webm" type="video/webm">
+        </video>
+        <video id="dancevideo2" autoplay loop muted>
+            <source src="./video2.webm" type="video/webm">
+        </video>
+        <video id="dancevideo3" autoplay loop muted>
+            <source src="./video3.webm" type="video/webm">
+        </video>
+        <audio id="danceaudio" loop>
+    <source src="./music.mp3" type="audio/mpeg">
+</audio>
+
+    </div>
+
+    <script src="./club.js"></script>
+</body>
+</html>
